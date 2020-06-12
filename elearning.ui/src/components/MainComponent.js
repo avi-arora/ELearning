@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import {Redirect, Route, Switch, withRouter} from 'react-router-dom';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
-import Login from './LoginComponent';
 import Register from './RegisterComponent';
 import Landing from './LandingComponent';
-
+import PrivateRoute from '../helpers/privateRoute';
+import LoginHandler from './handlers/LoginHandler';
 
 const mapStateToProps = state => {
     return {
@@ -22,9 +22,6 @@ class Main extends Component {
 
     render(){
 
-        const LoginPage = () => {
-            return <Login />
-        }
 
         const RegisterPage = () => {
             return <Register />
@@ -34,15 +31,20 @@ class Main extends Component {
             return <Landing />
         }
 
+        const DashboardView = () => {
+            return <></>
+        }
+
 
         return (
             <>
             <Header />
             <Switch>
                 <Route path="/index" component={LandingPage} />
-                <Route path="/login" component={LoginPage} />
+                <Route path="/login" component={LoginHandler} />
                 <Route path="/register" component={RegisterPage} />
-                <Redirect to="/index" />
+                <PrivateRoute path="/dashboard" component={DashboardView} />
+                <Redirect to="/login" />
             </Switch>
             <Footer />
             </>
