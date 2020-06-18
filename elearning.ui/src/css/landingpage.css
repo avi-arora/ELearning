@@ -1,3 +1,202 @@
+html, body{
+  height:100%;
+  font-family:'Source Serif Pro', georgia, sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  color: #383838;
+  line-height: 22px;
+  width: 100%;
+  height: 100%;
+  text-rendering: optimizeLegibility;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+h4{
+  color: #000000;
+}
+p{
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
+  color: #383838;
+}
+
+h1 {
+	font-variant-ligatures: common-ligatures;
+    margin: 0 0 3.75vw 5.75vw;
+    font-family: 'Playfair Display',Times, 'Times New Roman', serif;
+    font-size: 1.85vw;
+    font-weight: 900;
+    letter-spacing:  0.05vw;
+    line-height: 2.25vw;
+}
+
+
+
+.ampersand {
+  padding-left: .4vw;
+}
+/* 
+h2 {
+  font-size: 1.00vw;
+   padding-right: 1.25vw;
+   width: 18.125vw;
+   float: left;
+ } */
+
+/* LAYOUT */
+.left {
+  margin-left: 6.25vw;
+}
+
+.sidebar {
+	width: 30%;
+  border-right: 1px solid black;
+  height: 260px;
+}
+
+.projects {
+    width: 70%;
+    margin-left: 0vw;
+    color: #1a1414;
+    background-color: #fff;
+
+}
+
+.certblock{
+   flex-wrap: wrap;
+
+}
+.cert1, .cert2, .cert3{
+position: relative;
+}
+.columns {
+  display: flex;
+  width: 100%;
+}
+.left-column {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  flex-direction: column;
+  border-right: 1px solid white;
+  box-sizing: border-box;
+}
+.right-column {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.projects a {
+  color: #fff;
+}
+
+.brand-wrapper {
+  padding-top: 7px;
+  padding-bottom: 8px; }
+  .brand-wrapper .logo {
+    height: 25px; }
+
+/*# sourceMappingURL=login.css.map */
+.intro h1 {
+  font-variant-ligatures: common-ligatures;
+    margin: 0 0 2.5vw 5.75vw;
+    font-family: 'Playfair Display',Times, 'Times New Roman', serif;
+    font-size: 1.85vw;
+    font-weight: 900;
+    letter-spacing:  0.05vw;
+    line-height: 2.25vw;
+}
+
+.intro h2 {
+  font-variant-ligatures: common-ligatures;
+   font-family: Open Sans; 
+    font-size: 1.00vw;
+    font-weight: normal;
+      padding-right: 1.25vw;
+   width: 18.125vw;
+    letter-spacing:  0.05vw;
+    line-height: 1.25vw;
+   float: left;
+   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+ }
+
+ .footer-bs {
+    background-color: #9F67FB;
+  padding:20px 20px 10px 60px; 
+  color: rgba(255,255,255,1.00);
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+
+ 
+}
+.footer-bs .footer-brand, .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { padding:10px 10px; }
+.footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-color: transparent; }
+.footer-bs .footer-brand h2 { margin:0px 0px 10px; }
+.footer-bs .footer-brand p { font-size:12px; margin-top: 5px; color:rgba(255,255,255,0.70); }
+
+
+
+.footer-brand .brandname{
+  color: #ffffff; 
+  font-size: 1.2em;
+    font-weight: bold;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+} 
+.footer-brand a {
+  text-decoration: none;
+}
+
+.footer-bs .footer-nav ul.pages {padding:0px; }
+.footer-bs .footer-nav ul.pages li { padding:5px 0px; font-size: 12px;}
+.footer-bs .footer-nav ul.pages a { color:rgba(255,255,255,1.00); font-weight:bold; }
+.footer-bs .footer-nav ul.pages a:hover { color:rgba(255,255,255,0.80); text-decoration:none; }
+.footer-bs .footer-nav h4 {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom:10px;
+}
+
+.footer-bs .footer-nav ul.list { list-style:none; padding:0px; }
+.footer-bs .footer-nav ul.list li { padding:5px 0px;}
+.footer-bs .footer-nav ul.list a { color:rgba(255,255,255,0.80); }
+.footer-bs .footer-nav ul.list a:hover { color:rgba(255,255,255,0.60); text-decoration:none; }
+
+.footer-bs .footer-social ul { list-style:none; padding:0px; }
+.footer-bs .footer-social h4 {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.footer-bs .footer-social li { padding:5px 4px; font-size: 12px;}
+.footer-bs .footer-social a { color:rgba(255,255,255,1.00);}
+.footer-bs .footer-social a:hover { color:rgba(255,255,255,0.80); text-decoration:none; }
+
+.footer-bs .footer-ns h4 {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom:10px;
+}
+.footer-bs .footer-ns p { font-size:12px; color:rgba(255,255,255,0.70); }
+
+.input-group input{
+  height: calc(0.7em + .55rem + 2px);
+    padding: .65rem .75rem!important;
+   font-size: 14px;
+}
+
+
+@media (min-width: 768px) {
+  .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-left:solid 1px rgba(255,255,255,0.10); }
+}
+
+
+
 .Header {
   position: fixed;
     top: 0px;
@@ -21,13 +220,10 @@
   font-weight: bold;
 }
 
-
 .brandname {
-color: #2e2e2e!important; 
+color: #2e2e2e; 
   vertical-align: sub;
 }
-
-
 #certifications{
      font-family: 'Playfair Display',Times, 'Times New Roman', serif;
     font-size: 1.85vw;
@@ -359,11 +555,29 @@ line-height: 16px;
 .getstart2{
   margin-left: 15%;
 }
-.Hero1, 
-.SignUp{
+.Hero1 {
   position: relative;
     margin: 15px auto 0;
     margin-top: 150px;
+    padding-left: 50px;
+     padding-right: 50px;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 20px;
+    -ms-grid-columns: 45% 55%;
+    grid-template-columns: 35% 65%;
+    max-width: 1440px;
+    padding-top: 20px;
+    position: relative;
+     z-index:0;
+}
+ 
+.SignUp{
+  position: relative;
+    margin: 15px auto 0;
+    margin-top: 140px;
     padding-left: 50px;
      padding-right: 50px;
     -ms-flex-align: center;
@@ -429,7 +643,7 @@ line-height: 16px;
     position: relative;
     z-index: 10;
     border-right: 1px solid black;
-    height: 300px;
+  
 }
 
 .badge {
@@ -437,7 +651,7 @@ line-height: 16px;
 }
 
 .badge-primary {
-  font-size: 10px;
+  font-size: 13px;
     color: #fff;
     background-color: #966FD8;
 }

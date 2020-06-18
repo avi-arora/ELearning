@@ -50,7 +50,7 @@ class Register extends Component{
             <div className="col-sm-8 login-wrapper-reg my-auto">
             
               <p className="login-wrapper-footer-text-signup mb-0">Already have an account?  <br/><br/>
-               <a href="#!" className="badge badge-pill badge-primary"> Login</a></p>
+               <a href="/login" className="badge badge-pill badge-primary"> Login</a></p>
                 
               </div>
               <div className="col-sm-12 login-wrapper-reg-social my-auto">

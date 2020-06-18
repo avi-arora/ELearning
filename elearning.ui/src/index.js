@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import './style1.css';
-import './style2.css';
+import App from './App';   
+import './css/bootstrap4.5.0/css/bootstrap.min.css';
+import './css/fonts/googlefontfamily.css';
+import './css/landingpage.css';
+import './css/login-reg.css';
 import * as serviceWorker from './serviceWorker';
 
 

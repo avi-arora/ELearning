@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import coursera from '../images/coursera.svg';
 import edx from '../images/edx.svg';
 import udemy from '../images/udemy.svg';
@@ -13,9 +14,6 @@ import nav from '../images/naveen.jpg';
         super(props);
 	}
 
-	onClick(){
-		window.location.href="register";
-	}
 
     render(){
         return( 
@@ -30,7 +28,9 @@ import nav from '../images/naveen.jpg';
 
 		 <div className="getstart">  
 		 <p>Get started with a click. </p>
+     <Link to='/register'>
 		 <button type ="button" onClick={this.onClick} className="btn btn-xs">Start now</button>
+     </Link>
 		 </div>
 		</div>
 		

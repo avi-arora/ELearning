@@ -48,7 +48,7 @@ class Login extends Component{
         <div className="col-sm-6 py-4 d-sm-block forgot-block">
         	  <div className="col-sm-8 login-wrapper-reg my-auto">
               <a href="#!" className="badge badge-pill badge-primary">Forgot password?</a>
-              <p className="login-wrapper-footer-text">Don't have an account? <a href="#!" className="text-reg">Register here</a></p>
+              <p className="login-wrapper-footer-text">Don't have an account? <a href="/register" className="text-reg">Register here</a></p>
               </div>
               <div className="col-sm-12 login-wrapper-reg-social my-auto">
               <a href="#!" className="forgot-password-link">Or Login Via</a> <br/>
