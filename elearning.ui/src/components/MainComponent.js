@@ -7,6 +7,8 @@ import Landing from './LandingComponent';
 import PrivateRoute from '../helpers/privateRoute';
 import LoginHandler from './handlers/LoginHandler';
 
+
+
 const mapStateToProps = state => {
     return {
      //write redux mapping here
@@ -40,11 +42,11 @@ class Main extends Component {
             <>
             <Header />
             <Switch>
-                <Route path="/index" component={LandingPage} />
+                <Route path="/home" component={LandingPage} />
                 <Route path="/login" component={LoginHandler} />
                 <Route path="/register" component={RegisterPage} />
                 <PrivateRoute path="/dashboard" component={DashboardView} />
-                <Redirect to="/login" />
+                <Redirect to="/home" />
             </Switch>
             <Footer />
             </>
