@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import datetime
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -26,7 +27,7 @@ SECRET_KEY = 'xd7elp4yx%epmw=kiu*lf+_wmczfw)$5k^!o_7-(huq6g4au35'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+AUTH_USER_MODEL ="accounts.User"
 
 # Application definition
 
@@ -37,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'rest_framework.authtoken',
+    'accounts'
 ]
 
 MIDDLEWARE = [
@@ -100,6 +104,17 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ),
+}
+
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
@@ -112,6 +127,40 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+
+JWT_AUTH = {
+  'JWT_ENCODE_HANDLER':
+  'rest_framework_jwt.utils.jwt_encode_handler',
+  'JWT_DECODE_HANDLER':
+  'rest_framework_jwt.utils.jwt_decode_handler',
+  'JWT_PAYLOAD_HANDLER':
+  'rest_framework_jwt.utils.jwt_payload_handler',
+  'JWT_PAYLOAD_GET_USER_ID_HANDLER':
+  'rest_framework_jwt.utils.jwt_get_user_id_from_payload_handler',
+  # 'JWT_RESPONSE_PAYLOAD_HANDLER':
+  # 'rest_framework_jwt.utils.jwt_response_payload_handler',
+  'JWT_RESPONSE_PAYLOAD_HANDLER':
+  'accounts.utils.jwt_response_payload_handler',
+  'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=300),
+
+  'JWT_ALLOW_REFRESH': True,
+  'JWT_REFRESH_EXPIRATION_DELTA': datetime.timedelta(days=7),
+
+  'JWT_AUTH_HEADER_PREFIX': 'JWT', # Authorization: JWT <token>
+  'JWT_AUTH_COOKIE': None,
+
+}
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'naveen.c131@gmail.com'
+EMAIL_HOST_PASSWORD = 'jiittemp131'
+EMAIL_PORT = 587
+
+VERIFICATION_KEY_EXPIRY_DAYS = 2
+
+SITE_NAME = "Elearn"
 
 
 # Static files (CSS, JavaScript, Images)
